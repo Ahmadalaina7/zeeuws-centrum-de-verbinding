@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Zeeuws Centrum de Verbinding</title>
+  <meta name="description" content="Neem contact op voor een kennismakingsgesprek. Dreesstraat 8, Vlissingen. Bel Anniek of Femke, app via WhatsApp of stuur het formulier.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+  <a class="skip" href="#inhoud">Ga naar de inhoud</a>
+  <div data-header></div>
+  <main id="inhoud">
+    <section class="page-hero">
+      <div class="page-hero-media">
+        <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=2000&q=80" alt="Duinpad richting de zee">
+      </div>
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>Laten we kennismaken</h1>
+        <p class="lede" style="color:rgba(255,255,255,.86)">Op basis van een gesprek stemmen we af welke begeleiding passend is. Een indicatie is nodig om te starten; wij helpen je de weg te vinden.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cards">
+          <a class="card" href="tel:+31614439796"><div class="card-body"><h3>Bel Anniek</h3><p>06 14 43 97 96</p></div></a>
+          <a class="card" href="tel:+31652541664"><div class="card-body"><h3>Bel Femke</h3><p>06 52 54 16 64</p></div></a>
+          <a class="card" href="https://wa.me/31614439796" target="_blank" rel="noreferrer"><div class="card-body"><h3>WhatsApp</h3><p>Stuur een kort bericht, we reageren persoonlijk.</p></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sand">
+      <div class="container contact-panel">
+        <div class="contact-side">
+          <h3>Bezoekadres</h3>
+          <p>Dreesstraat 8<br>4384 DC Vlissingen</p>
+          <p><a href="mailto:info@zeeuwscentrumdeverbinding.nl">info@zeeuwscentrumdeverbinding.nl</a></p>
+          <p>KvK 90478010</p>
+          <h3 style="margin-top:28px">Vergoeding</h3>
+          <p>Aangesloten bij de Coöperatie van Kleinschalige Zorg in Zeeland en daardoor gecontracteerd bij alle Zeeuwse gemeenten. Trajecten worden vergoed vanuit de Jeugdwet of WMO, wanneer de gemeente goedkeuring geeft.</p>
+        </div>
+        <form class="contact-form" data-contact-form>
+          <h2>Stuur een bericht</h2>
+          <div class="form-success">Bedankt. Je e-mailprogramma opent nu een bericht aan ons.</div>
+          <div class="form-grid">
+            <div>
+              <label for="voornaam">Voornaam</label>
+              <input id="voornaam" name="voornaam" required>
+            </div>
+            <div>
+              <label for="achternaam">Achternaam</label>
+              <input id="achternaam" name="achternaam" required>
+            </div>
+            <div>
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+            <div>
+              <label for="telefoon">Telefoon</label>
+              <input id="telefoon" name="telefoon" type="tel">
+            </div>
+            <div class="full">
+              <label for="interesse">Interesse</label>
+              <select id="interesse" name="interesse">
+                <option>Dagbesteding</option>
+                <option>Individuele begeleiding</option>
+                <option>Snuffelmarkt</option>
+                <option>Indicatie / gemeente</option>
+                <option>Anders</option>
+              </select>
+            </div>
+            <div class="full">
+              <label for="bericht">Bericht</label>
+              <textarea id="bericht" name="bericht" required></textarea>
+            </div>
+            <div class="full">
+              <button class="btn btn-dark" type="submit">Verstuur</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Kwaliteit</p>
+        <h2>Aangesloten en geregistreerd</h2>
+        <div class="trust-grid" style="margin-top:28px">
+          <div class="trust-item"><h3>CKZ</h3><p>Coöperatie van Kleinschalige Zorg, onderdeel van Zeeuws Baken.</p></div>
+          <div class="trust-item"><h3>Gemeenten</h3><p>Gecontracteerd bij alle Zeeuwse gemeenten.</p></div>
+          <div class="trust-item"><h3>SKJ</h3><p>Anniek is geregistreerd bij het SKJ, met tuchtrecht voor jeugdhulp.</p></div>
+          <div class="trust-item"><h3>S.L.I.M.</h3><p>Via CKZ aangesloten bij het samenwerkingsverband voor jeugdhulp in Zeeland.</p></div>
+        </div>
+        <iframe class="map" style="margin-top:36px" title="Kaart Dreesstraat 8 Vlissingen" src="https://maps.google.com/maps?q=Dreesstraat%208%204384%20DC%20Vlissingen&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+      </div>
+    </section>
+  </main>
+  <div data-footer></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
