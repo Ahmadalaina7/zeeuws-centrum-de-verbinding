@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Zeeuws Centrum de Verbinding | Kleinschalige zorg in Vlissingen</title>
   <meta name="description" content="Kleinschalige dagbesteding en individuele begeleiding in Vlissingen. Voor jeugdigen en volwassenen. Kennismaken kan direct via bel, WhatsApp of het contactformulier.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="img/logo.png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body data-page="home">
   <a class="skip" href="#inhoud">Ga naar de inhoud</a>
@@ -25,7 +25,7 @@
         <img class="hero-logo" src="img/logo.png" alt="Zeeuws Centrum de Verbinding">
         <p class="eyebrow">Vlissingen · dagbesteding · begeleiding</p>
         <h1>Schitteren doe je<br>van binnenuit</h1>
-        <p class="lede" style="color: rgba(255,255,255,.86);">Een warme, kleinschalige plek in Zeeland waar jeugdigen en volwassenen met een zorgvraag weer zichzelf mogen zijn, groeien en verbinden.</p>
+        <p class="lede">Een warme, kleinschalige plek in Zeeland waar jeugdigen en volwassenen met een zorgvraag weer zichzelf mogen zijn, groeien en verbinden.</p>
         <div class="hero-actions">
           <a class="btn btn-gold" href="contact.html">Plan een kennismaking</a>
           <a class="btn btn-ghost" href="tel:+31614439796">Bel 06 14 43 97 96</a>
@@ -62,7 +62,7 @@
         <p class="eyebrow">Ons aanbod</p>
         <h2>Drie wegen naar meer grip en betekenis</h2>
         <p class="lede">Kies wat bij jou past. Elke route begint met een persoonlijk gesprek.</p>
-        <div class="cards" style="margin-top: 40px;">
+        <div class="cards">
           <article class="card">
             <img src="img/dagbesteding.jpg" alt="Dagbesteding in het centrum">
             <div class="card-body">
@@ -97,7 +97,7 @@
           <p class="eyebrow">Voor wie</p>
           <h2>Krachten voorop, niet klachten</h2>
           <p>Je kunt bij ons terecht als je steun zoekt tijdens of na een lastige fase. We begeleiden onder andere bij:</p>
-          <div class="tags" style="margin-top: 22px;">
+          <div class="tags">
             <span class="tag">Rouw en verlies</span>
             <span class="tag">Eenzaamheid</span>
             <span class="tag">Angst en faalangst</span>
@@ -123,7 +123,7 @@
       <div class="container">
         <p class="eyebrow">In het centrum</p>
         <h2>Dagen met ritme, creativiteit en rust</h2>
-        <div class="mosaic" style="margin-top: 36px;">
+        <div class="mosaic">
           <a class="tile wide" href="dagbesteding.html">
             <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80" alt="Samen koken">
             <span>Keukenploeg</span>
@@ -152,7 +152,7 @@
       <div class="container">
         <p class="eyebrow">Zo werkt het</p>
         <h2>Van eerste bericht tot passend traject</h2>
-        <div class="steps" style="margin-top: 28px;">
+        <div class="steps">
           <div class="step">
             <div class="step-num">01</div>
             <h3>Kennismaken</h3>
@@ -176,34 +176,49 @@
       <div class="container">
         <p class="eyebrow">Contact</p>
         <h2>Nieuwsgierig geworden?</h2>
-        <p class="lede" style="color: rgba(250,246,240,.82);">Laat je gegevens achter. We reageren persoonlijk en stemmen af welke begeleiding passend is.</p>
-        <div class="contact-panel" style="margin-top: 36px;">
+        <p class="lede">Laat je gegevens achter. We reageren persoonlijk en stemmen af welke begeleiding passend is.</p>
+        <div class="contact-panel">
           <div class="contact-side">
             <h3>Direct bereikbaar</h3>
-            <p>Anniek de Kok<br><a href="tel:+31614439796">06 14 43 97 96</a></p>
-            <p>Femke ten Haken<br><a href="tel:+31652541664">06 52 54 16 64</a></p>
-            <p><a href="mailto:info@zeeuwscentrumdeverbinding.nl">info@zeeuwscentrumdeverbinding.nl</a></p>
+            <div class="contact-person">
+              <strong>Anniek de Kok</strong>
+              <a href="tel:+31614439796">06 14 43 97 96</a>
+            </div>
+            <div class="contact-person">
+              <strong>Femke ten Haken</strong>
+              <a href="tel:+31652541664">06 52 54 16 64</a>
+            </div>
+            <p class="contact-mail"><a href="mailto:info@zeeuwscentrumdeverbinding.nl">info@zeeuwscentrumdeverbinding.nl</a></p>
             <p>Dreesstraat 8<br>4384 DC Vlissingen</p>
-            <a class="btn btn-gold" href="https://wa.me/31614439796" target="_blank" rel="noreferrer">WhatsApp Anniek</a>
+            <div class="contact-actions">
+              <a class="action-btn action-btn-solid" href="https://wa.me/31614439796" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zm-7.01 15.24h-.01c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.42 5.83c0 4.55-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.22-.08-.39-.12-.55.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74 1.48.64 2.07.7 2.81.58.43-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.10-.22-.16-.47-.29z"/></svg>
+                WhatsApp Anniek
+              </a>
+              <a class="action-btn action-btn-line" href="tel:+31614439796">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
+                Bel Anniek
+              </a>
+            </div>
           </div>
           <form class="contact-form" data-contact-form>
             <div class="form-success">Bedankt. Je e-mailprogramma opent nu een bericht aan ons. We nemen zo snel mogelijk contact op.</div>
             <div class="form-grid">
               <div>
                 <label for="voornaam">Voornaam</label>
-                <input id="voornaam" name="voornaam" required>
+                <input id="voornaam" name="voornaam" autocomplete="given-name" required>
               </div>
               <div>
                 <label for="achternaam">Achternaam</label>
-                <input id="achternaam" name="achternaam" required>
+                <input id="achternaam" name="achternaam" autocomplete="family-name" required>
               </div>
               <div>
                 <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" required>
+                <input id="email" name="email" type="email" autocomplete="email" required>
               </div>
               <div>
                 <label for="telefoon">Telefoon</label>
-                <input id="telefoon" name="telefoon" type="tel">
+                <input id="telefoon" name="telefoon" type="tel" autocomplete="tel">
               </div>
               <div class="full">
                 <label for="interesse">Waar gaat je vraag over?</label>

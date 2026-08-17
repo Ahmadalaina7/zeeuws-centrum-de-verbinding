@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Contact | Zeeuws Centrum de Verbinding</title>
   <meta name="description" content="Neem contact op voor een kennismakingsgesprek. Dreesstraat 8, Vlissingen. Bel Anniek of Femke, app via WhatsApp of stuur het formulier.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="img/logo.png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body data-page="contact">
   <a class="skip" href="#inhoud">Ga naar de inhoud</a>
@@ -23,7 +23,7 @@
       <div class="container">
         <p class="eyebrow">Contact</p>
         <h1>Laten we kennismaken</h1>
-        <p class="lede" style="color:rgba(255,255,255,.86)">Op basis van een gesprek stemmen we af welke begeleiding passend is. Een indicatie is nodig om te starten; wij helpen je de weg te vinden.</p>
+        <p class="lede">Op basis van een gesprek stemmen we af welke begeleiding passend is. Een indicatie is nodig om te starten; wij helpen je de weg te vinden.</p>
       </div>
     </section>
 
@@ -42,9 +42,9 @@
         <div class="contact-side">
           <h3>Bezoekadres</h3>
           <p>Dreesstraat 8<br>4384 DC Vlissingen</p>
-          <p><a href="mailto:info@zeeuwscentrumdeverbinding.nl">info@zeeuwscentrumdeverbinding.nl</a></p>
+          <p class="contact-mail"><a href="mailto:info@zeeuwscentrumdeverbinding.nl">info@zeeuwscentrumdeverbinding.nl</a></p>
           <p>KvK 90478010</p>
-          <h3 style="margin-top:28px">Vergoeding</h3>
+          <h3 class="contact-sub">Vergoeding</h3>
           <p>Aangesloten bij de Coöperatie van Kleinschalige Zorg in Zeeland en daardoor gecontracteerd bij alle Zeeuwse gemeenten. Trajecten worden vergoed vanuit de Jeugdwet of WMO, wanneer de gemeente goedkeuring geeft.</p>
         </div>
         <form class="contact-form" data-contact-form>
@@ -53,19 +53,19 @@
           <div class="form-grid">
             <div>
               <label for="voornaam">Voornaam</label>
-              <input id="voornaam" name="voornaam" required>
+              <input id="voornaam" name="voornaam" autocomplete="given-name" required>
             </div>
             <div>
               <label for="achternaam">Achternaam</label>
-              <input id="achternaam" name="achternaam" required>
+              <input id="achternaam" name="achternaam" autocomplete="family-name" required>
             </div>
             <div>
               <label for="email">E-mail</label>
-              <input id="email" name="email" type="email" required>
+              <input id="email" name="email" type="email" autocomplete="email" required>
             </div>
             <div>
               <label for="telefoon">Telefoon</label>
-              <input id="telefoon" name="telefoon" type="tel">
+              <input id="telefoon" name="telefoon" type="tel" autocomplete="tel">
             </div>
             <div class="full">
               <label for="interesse">Interesse</label>
@@ -93,13 +93,13 @@
       <div class="container">
         <p class="eyebrow">Kwaliteit</p>
         <h2>Aangesloten en geregistreerd</h2>
-        <div class="trust-grid" style="margin-top:28px">
+        <div class="trust-grid">
           <div class="trust-item"><h3>CKZ</h3><p>Coöperatie van Kleinschalige Zorg, onderdeel van Zeeuws Baken.</p></div>
           <div class="trust-item"><h3>Gemeenten</h3><p>Gecontracteerd bij alle Zeeuwse gemeenten.</p></div>
           <div class="trust-item"><h3>SKJ</h3><p>Anniek is geregistreerd bij het SKJ, met tuchtrecht voor jeugdhulp.</p></div>
           <div class="trust-item"><h3>S.L.I.M.</h3><p>Via CKZ aangesloten bij het samenwerkingsverband voor jeugdhulp in Zeeland.</p></div>
         </div>
-        <iframe class="map" style="margin-top:36px" title="Kaart Dreesstraat 8 Vlissingen" src="https://maps.google.com/maps?q=Dreesstraat%208%204384%20DC%20Vlissingen&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+        <iframe class="map" title="Kaart Dreesstraat 8 Vlissingen" src="https://maps.google.com/maps?q=Dreesstraat%208%204384%20DC%20Vlissingen&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
       </div>
     </section>
   </main>

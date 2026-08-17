@@ -100,10 +100,12 @@ toggle?.addEventListener("click", () => {
   const open = links?.classList.toggle("open");
   toggle.setAttribute("aria-expanded", open ? "true" : "false");
   toggle.setAttribute("aria-label", open ? "Menu sluiten" : "Menu openen");
+  document.body.classList.toggle("menu-open", Boolean(open));
 });
 links?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     links.classList.remove("open");
+    document.body.classList.remove("menu-open");
     toggle?.setAttribute("aria-expanded", "false");
     toggle?.setAttribute("aria-label", "Menu openen");
   });
