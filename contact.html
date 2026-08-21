@@ -7,18 +7,17 @@
   <meta name="description" content="Neem contact op voor een kennismakingsgesprek. Dreesstraat 8, Vlissingen. Bel Anniek of Femke, app via WhatsApp of stuur het formulier.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="img/logo.png">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body data-page="contact">
-  <a class="skip" href="#inhoud">Ga naar de inhoud</a>
   <div data-header></div>
   <main id="inhoud">
     <section class="page-hero">
       <div class="page-hero-media">
-        <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=2000&q=80" alt="Duinpad richting de zee">
+        <img src="img/Header-Homepage-ZCDV-2-1.jpg" alt="Samen koffie drinken bij het centrum">
       </div>
       <div class="container">
         <p class="eyebrow">Contact</p>
@@ -30,9 +29,27 @@
     <section class="section">
       <div class="container">
         <div class="cards">
-          <a class="card" href="tel:+31614439796"><div class="card-body"><h3>Bel Anniek</h3><p>06 14 43 97 96</p></div></a>
-          <a class="card" href="tel:+31652541664"><div class="card-body"><h3>Bel Femke</h3><p>06 52 54 16 64</p></div></a>
-          <a class="card" href="https://wa.me/31614439796" target="_blank" rel="noreferrer"><div class="card-body"><h3>WhatsApp</h3><p>Stuur een kort bericht, we reageren persoonlijk.</p></div></a>
+          <a class="card contact-choice" href="tel:+31614439796">
+            <div class="card-body">
+              <span class="card-kicker">Telefoon</span>
+              <h3>Bel Anniek</h3>
+              <p>06 14 43 97 96</p>
+            </div>
+          </a>
+          <a class="card contact-choice" href="tel:+31652541664">
+            <div class="card-body">
+              <span class="card-kicker">Telefoon</span>
+              <h3>Bel Femke</h3>
+              <p>06 52 54 16 64</p>
+            </div>
+          </a>
+          <a class="card contact-choice" href="https://wa.me/31614439796" target="_blank" rel="noreferrer">
+            <div class="card-body">
+              <span class="card-kicker">Bericht</span>
+              <h3>WhatsApp</h3>
+              <p>Stuur een kort bericht, we reageren persoonlijk.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -65,7 +82,7 @@
             </div>
             <div>
               <label for="telefoon">Telefoon</label>
-              <input id="telefoon" name="telefoon" type="tel" autocomplete="tel">
+              <input id="telefoon" name="telefoon" type="tel" inputmode="tel" autocomplete="tel">
             </div>
             <div class="full">
               <label for="interesse">Interesse</label>
@@ -94,16 +111,16 @@
         <p class="eyebrow">Kwaliteit</p>
         <h2>Aangesloten en geregistreerd</h2>
         <div class="trust-grid">
-          <div class="trust-item"><h3>CKZ</h3><p>Coöperatie van Kleinschalige Zorg, onderdeel van Zeeuws Baken.</p></div>
-          <div class="trust-item"><h3>Gemeenten</h3><p>Gecontracteerd bij alle Zeeuwse gemeenten.</p></div>
-          <div class="trust-item"><h3>SKJ</h3><p>Anniek is geregistreerd bij het SKJ, met tuchtrecht voor jeugdhulp.</p></div>
-          <div class="trust-item"><h3>S.L.I.M.</h3><p>Via CKZ aangesloten bij het samenwerkingsverband voor jeugdhulp in Zeeland.</p></div>
+          <div class="trust-item"><img src="img/ckz.png" alt="CKZ"><h3>CKZ</h3><p>Coöperatie van Kleinschalige Zorg, onderdeel van Zeeuws Baken.</p></div>
+          <div class="trust-item"><img src="img/zeeuws-baken.png" alt="Zeeuws Baken"><h3>Gemeenten</h3><p>Gecontracteerd bij alle Zeeuwse gemeenten.</p></div>
+          <div class="trust-item"><img src="img/skj.png" alt="SKJ"><h3>SKJ</h3><p>Anniek is geregistreerd bij het SKJ, met tuchtrecht voor jeugdhulp.</p></div>
+          <div class="trust-item"><img src="img/slim.png" alt="S.L.I.M."><h3>S.L.I.M.</h3><p>Via CKZ aangesloten bij het samenwerkingsverband voor jeugdhulp in Zeeland.</p></div>
         </div>
         <iframe class="map" title="Kaart Dreesstraat 8 Vlissingen" src="https://maps.google.com/maps?q=Dreesstraat%208%204384%20DC%20Vlissingen&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
       </div>
     </section>
   </main>
   <div data-footer></div>
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=9"></script>
 </body>
 </html>

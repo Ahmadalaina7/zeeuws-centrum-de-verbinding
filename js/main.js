@@ -4,42 +4,33 @@ const page = document.body.dataset.page || "home";
 
 const logo = `
   <a class="logo" href="index.html">
-    <img src="img/logo.png" width="72" height="72" alt="Zeeuws Centrum de Verbinding">
-    <div>
+    <img src="img/logo.png" width="52" height="52" alt="">
+    <span>
       <strong>De Verbinding</strong>
-      <span>Zeeuws Centrum</span>
-    </div>
+      <small>Zeeuws Centrum</small>
+    </span>
   </a>
 `;
 
 if (header) {
   header.innerHTML = `
-    <div class="topbar">
-      <div class="container">
-        <span>Dreesstraat 8, 4384 DC Vlissingen · nabij bos en strand</span>
-        <span>
-          <a href="tel:+31614439796">06 14 43 97 96</a> ·
-          <a href="tel:+31652541664">06 52 54 16 64</a> ·
-          <a href="mailto:info@zeeuwscentrumdeverbinding.nl">info@zeeuwscentrumdeverbinding.nl</a>
-        </span>
-      </div>
-    </div>
-    <div class="header">
-      <div class="container nav">
+    <header class="site-header">
+      <div class="container header-bar">
         ${logo}
-        <button class="menu-toggle" aria-label="Menu openen"><span></span></button>
-        <ul class="nav-links">
-          <li><a href="index.html" data-nav="home">Home</a></li>
-          <li><a href="dagbesteding.html" data-nav="dagbesteding">Dagbesteding</a></li>
-          <li><a href="begeleiding.html" data-nav="begeleiding">Begeleiding</a></li>
-          <li><a href="snuffelmarkt.html" data-nav="snuffelmarkt">Snuffelmarkt</a></li>
-          <li><a href="over-ons.html" data-nav="over">Wie zijn wij</a></li>
-          <li><a href="contact.html" data-nav="contact">Contact</a></li>
-          <li class="nav-cta"><a class="btn btn-gold" href="contact.html">Kennismaken</a></li>
-        </ul>
-        <a class="btn btn-gold header-cta" href="contact.html">Kennismaken</a>
+        <button class="menu-toggle" type="button" aria-label="Menu openen" aria-controls="site-nav" aria-expanded="false"><span></span></button>
+        <div class="nav-wrap" id="site-nav">
+          <ul class="nav-links">
+            <li><a href="index.html" data-nav="home">Home</a></li>
+            <li><a href="dagbesteding.html" data-nav="dagbesteding">Dagbesteding</a></li>
+            <li><a href="begeleiding.html" data-nav="begeleiding">Begeleiding</a></li>
+            <li><a href="snuffelmarkt.html" data-nav="snuffelmarkt">Snuffelmarkt</a></li>
+            <li><a href="over-ons.html" data-nav="over">Wie zijn wij</a></li>
+            <li><a href="contact.html" data-nav="contact">Contact</a></li>
+          </ul>
+          <a class="btn btn-gold header-cta" href="contact.html">Kennismaken</a>
+        </div>
       </div>
-    </div>
+    </header>
   `;
   const active = header.querySelector(`[data-nav="${page}"]`);
   if (active) active.classList.add("active");
@@ -60,7 +51,7 @@ if (footer) {
           <p><a href="snuffelmarkt.html">Snuffelmarkt</a></p>
         </div>
         <div>
-          <h3>Direct contact</h3>
+          <h3>Contact</h3>
           <p>Anniek de Kok<br><a href="tel:+31614439796">06 14 43 97 96</a></p>
           <p>Femke ten Haken<br><a href="tel:+31652541664">06 52 54 16 64</a></p>
           <p><a href="mailto:info@zeeuwscentrumdeverbinding.nl">info@zeeuwscentrumdeverbinding.nl</a></p>
@@ -78,54 +69,28 @@ if (footer) {
       </div>
     </footer>
     <div class="sticky-cta">
-      <a class="btn btn-ghost" href="tel:+31614439796">Bel ons</a>
-      <a class="btn btn-gold" href="contact.html">Plan gesprek</a>
-    </div>
-    <div class="float-contact">
-      <div class="float-panel" id="contactPanel">
-        <a href="tel:+31614439796">Bel Anniek</a>
-        <a href="tel:+31652541664">Bel Femke</a>
-        <a href="https://wa.me/31614439796" target="_blank" rel="noreferrer">WhatsApp</a>
-        <a href="mailto:info@zeeuwscentrumdeverbinding.nl">E-mail</a>
-        <a href="contact.html">Kennismakingsgesprek</a>
-      </div>
-      <button class="float-btn" id="contactToggle" aria-label="Contactopties">Contact</button>
+      <a class="btn sticky-wa" href="https://wa.me/31614439796" target="_blank" rel="noreferrer">WhatsApp</a>
+      <a class="btn btn-gold" href="tel:+31614439796">Bel Anniek</a>
     </div>
   `;
 }
 
 const toggle = document.querySelector(".menu-toggle");
-const links = document.querySelector(".nav-links");
-toggle?.addEventListener("click", () => {
-  const open = links?.classList.toggle("open");
-  toggle.setAttribute("aria-expanded", open ? "true" : "false");
-  toggle.setAttribute("aria-label", open ? "Menu sluiten" : "Menu openen");
-  document.body.classList.toggle("menu-open", Boolean(open));
-});
-links?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    links.classList.remove("open");
-    document.body.classList.remove("menu-open");
-    toggle?.setAttribute("aria-expanded", "false");
-    toggle?.setAttribute("aria-label", "Menu openen");
-  });
-});
+const nav = document.querySelector(".nav-wrap");
+const setMenu = (open) => {
+  nav?.classList.toggle("open", open);
+  toggle?.setAttribute("aria-expanded", open ? "true" : "false");
+  toggle?.setAttribute("aria-label", open ? "Menu sluiten" : "Menu openen");
+  document.body.classList.toggle("menu-open", open);
+};
 
-window.addEventListener("scroll", () => {
-  document.querySelector(".header")?.classList.toggle("scrolled", window.scrollY > 8);
+toggle?.addEventListener("click", () => setMenu(!nav?.classList.contains("open")));
+nav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setMenu(false);
 });
-
-document.querySelectorAll(".page-hero .container").forEach((el) => {
-  if (el.querySelector(".hero-logo")) return;
-  const img = document.createElement("img");
-  img.className = "hero-logo";
-  img.src = "img/logo.png";
-  img.alt = "Zeeuws Centrum de Verbinding";
-  el.prepend(img);
-});
-
-document.getElementById("contactToggle")?.addEventListener("click", () => {
-  document.getElementById("contactPanel")?.classList.toggle("open");
+window.matchMedia("(min-width: 981px)").addEventListener("change", (event) => {
+  if (event.matches) setMenu(false);
 });
 
 document.querySelectorAll("[data-contact-form]").forEach((form) => {
